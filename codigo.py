@@ -16,9 +16,9 @@ pyautogui.PAUSE = 0.5
 
 
     #Abrir o navegador(chrome)
-pyautogui.press("win")
-pyautogui.write("chrome")
-pyautogui.press("enter")
+pyautogui.press("win")    # apertar a tecla win
+pyautogui.write("chrome")    # escrever o nome do navegador
+pyautogui.press("enter")    # apertar enter
 
 
 
@@ -44,3 +44,57 @@ pyautogui.write("123456")#escreve a senha
 pyautogui.press("tab") #passou para o campo de login
 
 pyautogui.press("enter")#login
+
+time.sleep(3)
+
+# 3. Importar a base de dados 
+#pip install pandas numpy openpyxl
+
+import pandas as pd
+
+df = pd.read_csv("produtos.csv")
+
+print(df)
+
+
+
+for linha in df.index:
+
+    # 4.Cadastrar um produto
+    codigo = str(df.loc[linha, "codigo"]) #str = string
+    #Clicar no codigo do produto
+    pyautogui.click(x=593, y=367)
+    #prencher o codigo do produto
+    pyautogui.write(codigo)
+    #Passar pro proximo campo
+    pyautogui.press("tab")
+    #Marca
+    pyautogui.write(str(df.loc[linha, "marca"]))
+    pyautogui.press("tab")
+    #Tipo
+    pyautogui.write(str(df.loc[linha, "tipo"]))
+    pyautogui.press("tab")  
+    #Categoria
+    pyautogui.write(str(df.loc[linha, "categoria"]))
+    pyautogui.press("tab") 
+    #Preço
+    pyautogui.write(str(df.loc[linha, "preco_unitario"]))
+    pyautogui.press("tab")
+    #Custo
+    pyautogui.write(str(df.loc[linha, "custo"]))
+    pyautogui.press("tab")
+
+    #obs
+    obs = str(df.loc[linha, "obs"])
+    if  obs != "nan":
+        pyautogui.write(obs)
+        
+    #Passar pro proximo campo
+    pyautogui.press("tab")
+    #Clicar no botão adicionar
+    pyautogui.press("enter") 
+
+    #para subir a pagina
+    pyautogui.scroll(5000)
+
+

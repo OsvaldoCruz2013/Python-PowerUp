@@ -35,13 +35,18 @@ time.sleep(3)
 
 pyautogui.click(x=804, y=507)
 
-pyautogui.write("Aulapython@gmail.com")#escreve o email
+pyautogui.write("*****@gmail.com")#escreve o email
 
 pyautogui.press("tab") #passou para o campo de senha
 
-pyautogui.write("123456")#escreve a senha
+pyautogui.write("******")#escreve a senha
 
 pyautogui.press("tab") #passou para o campo de login
 
 pyautogui.press("enter")#login
 
+3. # Tela de email
+![alt text](image.png)
+
+4. # Tela de cadastro dos produtos
+![alt text](image-1.png)
