@@ -3,19 +3,20 @@
 
 #Utilizando as bibliotecas
 
---import pyautogui
+import pyautogui
 
---import time
+import time
 
 #Para ter uma pausa antes de prosseguir para o proximo passo
 
---pyautogui.PAUSE 
+pyautogui.PAUSE 
 
 #Abrir o navegador
---pyautogui.press("win")
 
---pyautogui.write("chrome")
+pyautogui.press("win")
 
---pyautogui.press("enter")
+pyautogui.write("chrome")
+
+pyautogui.press("enter")
 
 
