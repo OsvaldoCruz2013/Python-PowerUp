@@ -27,7 +27,7 @@ pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login")
 pyautogui.press("enter")
 
 
-    # aqui pode ser que ele demora alguns segundos para carregar o site
+    # aqui pode ser que ele demora alguns segundos para carregar o site 
 
 time.sleep(3)   
 
@@ -66,7 +66,7 @@ for linha in df.index:
     # 4.Cadastrar um produto
     codigo = str(df.loc[linha, "codigo"]) #str = string
     #Clicar no codigo do produto
-    pyautogui.click(x=593, y=367)
+    pyautogui.click(x=763, y=320)
     #prencher o codigo do produto
     pyautogui.write(codigo)
     #Passar pro proximo campo
@@ -99,5 +99,3 @@ for linha in df.index:
 
     #para subir a pagina
     pyautogui.scroll(5000)
-
-
