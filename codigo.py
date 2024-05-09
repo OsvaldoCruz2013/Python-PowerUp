@@ -20,7 +20,7 @@ pyautogui.press("win")    # apertar a tecla win
 pyautogui.write("chrome")    # escrever o nome do navegador
 pyautogui.press("enter")    # apertar enter
 
-
+time.sleep(1)   
 
     #Entrar no sistema
 pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login")
@@ -29,12 +29,15 @@ pyautogui.press("enter")
 
     # aqui pode ser que ele demora alguns segundos para carregar o site
 
-time.sleep(3)
+time.sleep(3)   
 
 2. # Fazer login no sistema
-   #print(pyautogui.position())
+#   print(pyautogui.position())
 
-pyautogui.click(x=804, y=507)
+#yautogui.click(x=804, y=507)
+
+pyautogui.click(x=916, y=436)
+    
 pyautogui.write("Aulapython@gmail.com")#escreve o email
 
 pyautogui.press("tab") #passou para o campo de senha
